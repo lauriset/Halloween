@@ -1,5 +1,3 @@
-# Halloween
-
 Setup
 Firefox css
 
