@@ -1,0 +1,160 @@
+/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
+
+configuration {
+    show-icons:                     false;
+    display-drun: 		    "";
+    drun-display-format:            "{icon} {name}"; 
+    disable-history:                false;
+    click-to-exit: 		    true;
+}
+
+@import "font.rasi"
+@import "colors.rasi"
+
+window {
+    transparency:                   "real";
+    background-color: 	            @BG;
+    text-color:                     @FG;
+
+    border-radius:                  5px;
+
+    width:                          250px;
+    location:                       center;
+    anchor:                         center;
+    x-offset:                       -800;
+    y-offset:                       -260;
+}
+
+prompt {
+    enabled: 			     true;
+	padding: 		     8px;
+	background-color: 	     @BG;
+	text-color: 		     @IMG;
+}
+
+textbox-prompt-colon {
+	expand: 		     false;
+	str: 			     "";
+    border-radius:                   100%;
+    background-color:                @SEL;
+    text-color:                      @BG;
+    padding:                         9px 11px 9px 11px;
+	font:						"MesloLGS NF 9";
+}
+
+entry {
+    background-color:               @BGA;
+    text-color:                     @IMG;
+    placeholder-color:              @IMG;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search...";
+    blink:                          true;
+    border:                  	    0px 0px 0px 0px;
+    border-color:                   @BDR;
+    border-radius:                  8px;
+    padding:                        8px;
+}
+
+inputbar {
+	children: 		    [ textbox-prompt-colon, prompt, entry ];
+    background-color:               @BG;
+    text-color:                     @FG;
+    expand:                         false;
+    border:                  	    0px 0px 0px 0px;
+    border-radius:                  0px;
+    border-color:                   @BDR;
+    margin:                         0px 10px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+case-indicator {
+    background-color:               @BG;
+    text-color:                     @FG;
+    spacing:                        0;
+}
+
+
+listview {
+    background-color:               @BG;
+    columns:                        1;
+    lines:			    10;
+    spacing:                        2px;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @BG;
+    children:                       [ inputbar, listview ];
+    spacing:                        25px;
+    padding:                        25px;
+}
+
+element {
+    background-color:               @BG;
+    text-color:                     @FG;
+
+    orientation:                    horizontal;
+    border-radius:                  0px;
+    padding:                        6px 6px 6px 6px;
+}
+
+element-icon {
+    background-color: 		    inherit;
+    text-color:       		    inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           24px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 		    inherit;
+    text-color:       		    inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    
+    margin:                         0px 10px 0px 0px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @UGT;
+    text-color:                     @FG;
+
+    border-radius:                  5px;
+
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @BGA;
+    text-color:                     @FG;
+
+}
+
+element selected {
+    background-color:               @BGA;
+    text-color:                     @SEL;
+
+    border:                  	    0px 0px 0px 0px;
+    border-radius:                  8px;
+    border-color:                   @IMG;
+
+}
+
+element selected.urgent {
+    background-color:               @UGT;
+    text-color:                     @FG;
+
+}
+
+element selected.active {
+    background-color:               @BGA;
+    color:                          @FG;
+
+}

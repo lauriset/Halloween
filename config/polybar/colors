@@ -1,0 +1,18 @@
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[color]
+BG = #090F1800
+BGL = #19324100
+BGA = #C74E61
+FG = #F8D0D7
+FA = #F6E0E4
+
+pink = #D97E96
+magenta = #A36584
+purple = #635373
+blue = #C74E61
+slate = #152B42
+gray = #1A2133
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

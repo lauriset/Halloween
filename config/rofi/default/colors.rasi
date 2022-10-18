@@ -1,0 +1,22 @@
+/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
+
+/* Color-Scheme */
+
+* {
+    BG:    #16161A;
+    BGA:   #E76577;
+    FG:    #59BEABff;
+    BDR:   #c8fcf2;
+    SEL:   #16161A;
+    UGT:   #E06B74ff;
+	IMG:   #c8fcf2ff;
+	ON:    #7EA3FEff;
+	OFF:   #E06B74ff;
+	background:	#080F19;
+	background-alt:	#080F19;
+	foreground:	#25FFFF;
+	selected:	#25FFFF;
+	urgent:		#635373;
+	on:		#496886;
+	off:		#A36584;
+}
