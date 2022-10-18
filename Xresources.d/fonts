@@ -1,0 +1,7 @@
+
+! URxvt.font: xft:MesloLGS NF:size=10
+URxvt.font:   xft:CaskaydiaCove NF:size=10:autohint=true
+! URxvt.font: xft:SpaceMono Nerd Font Mono:pixelsize=13
+! URxvt.font: xft:CartographCF Nerd Font:pixelsize=12:antialias=true:autohint=true;
+! URxvt.font: xft:Sarasa Mono CL Nerd Font:pixelsize=12:antialias=true:autohint=true;
+
