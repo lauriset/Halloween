@@ -1,0 +1,44 @@
+conky.config = {
+
+  alignment = 'top_left',
+  default_color = 'ffffff',		
+  double_buffer = true,
+  draw_outline = false,
+  draw_shades = false, 
+  gap_x = -70,
+  gap_y = 400,
+  border_inner_margin = 5,
+  minimum_size = 280,
+  net_avg_samples = 2,
+  no_buffers = true,
+  override_utf8_locale = true,
+  own_window_argb_visual = true,
+  own_window_argb_value = 110,
+  own_window_class = 'Conky', 
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_transparent = true,
+  own_window_colour = 'black',
+  own_window_type = 'desktop',
+  own_window = true,
+  minimum_size = 450,
+  maximum_width = 555,
+  pad_percents = 2,	
+  cpu_avg_samples = 2,		
+  short_units = true,			
+  text_buffer_size = 900,
+  total_run_times = 0,
+  update_interval = 1.0,
+  use_spacer = 'right',
+  use_xft = true,
+  xftfont = 'Tall Films:pixelsize=25',
+  }
+  
+conky.text = [[
+${color EB3D54}
+${if_running spotify}${voffset 495}${goto 95}${font Fortuna Dot:size=30}  Spotify${font Tall Films:bold:size=12}${color white}
+${voffset 18}${goto 125}Title : ${goto 187}${color F8D0D7}${execi 3 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "title"|egrep -v "title"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$ }${color white}
+${goto 125}Artist : ${goto 177}${color C84D61}${execi 3 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-|cut -d '"' -f 1|egrep -v ^$ }${color white}
+${goto 125}Album : ${goto 207}${color F8D0D7}${execi 3 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "album"|egrep -v "album"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$ }
+${endif}
+]]
+
